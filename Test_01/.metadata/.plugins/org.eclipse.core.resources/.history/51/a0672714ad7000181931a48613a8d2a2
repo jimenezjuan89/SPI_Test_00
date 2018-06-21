@@ -1,0 +1,70 @@
+/*
+ * MCP23S17_REG.h
+ *
+ *  Created on: Jun 14, 2018
+ *      Author: JJimene6
+ */
+
+#ifndef MCP23S17_REG_H_
+#define MCP23S17_REG_H_
+
+#define IO_EXPANDER_BASE    0x01UL
+
+
+//REGISTER ADDRESSES -->IOCON.BANK = 0<--//
+//typedef struct {
+//    uint8_t     IODIRA : 8;
+//    uint8_t     IODIRB : 8;
+//    uint8_t     IPOLA : 8;
+//    uint8_t     IPOLB : 8;
+//    uint8_t     GPINTENA : 8;
+//    uint8_t     GPINTENB : 8;
+//    uint8_t     DEFVALA : 8;
+//    uint8_t     DEFVALB : 8;
+//    uint8_t     INTCONA : 8;
+//    uint8_t     INTCONB : 8;
+//    uint8_t     IOCON_0 : 8;
+//    uint8_t     IOCON_1 : 8;
+//    uint8_t     GPPUA : 8;
+//    uint8_t     GPPUB : 8;
+//    uint8_t     INTFA : 8;
+//    uint8_t     INTFB : 8;
+//    uint8_t     INTCAPA : 8;
+//    uint8_t     INTCAPB : 8;
+//    uint8_t     xGPIOA : 8;
+//    uint8_t     xGPIOB : 8;
+//    uint8_t     OLATA : 8;
+//    uint8_t     OLATB : 8;
+//} RegAddress_t;
+
+
+typedef struct {
+    uint8_t     IODIRA;
+    uint8_t     IODIRB;
+    uint8_t     IPOLA;
+    uint8_t     IPOLB;
+    uint8_t     GPINTENA;
+    uint8_t     GPINTENB;
+    uint8_t     DEFVALA;
+    uint8_t     DEFVALB;
+    uint8_t     INTCONA;
+    uint8_t     INTCONB;
+    uint8_t     IOCON_0;
+    uint8_t     IOCON_1;
+    uint8_t     GPPUA;
+    uint8_t     GPPUB;
+    uint8_t     INTFA;
+    uint8_t     INTFB;
+    uint8_t     INTCAPA;
+    uint8_t     INTCAPB;
+    uint8_t     xGPIOA;
+    uint8_t     xGPIOB;
+    uint8_t     OLATA;
+    uint8_t     OLATB;
+} RegAddress_t;
+
+#define IO_EXPANDER      ((RegAddress_t*) IO_EXPANDER_BASE)
+
+
+
+#endif /* MCP23S17_REG_H_ */

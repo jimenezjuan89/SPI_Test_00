@@ -1,0 +1,18 @@
+
+
+/**
+ * main.c
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "MCP23S17_EXP.c"
+#include "myHeaderFile.h"
+#include "delay.c"
+
+int main(void)
+{
+
+return 0;
+}
+
+

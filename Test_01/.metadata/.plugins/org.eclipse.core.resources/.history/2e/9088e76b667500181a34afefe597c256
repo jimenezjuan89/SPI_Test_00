@@ -1,0 +1,77 @@
+/*
+ * MCP23S17_EXP.C
+ *
+ *  Created on: Jun 21, 2018
+ *      Author: JJimene6
+ */
+#include "MCP23S17_EXP.h"
+#include "myHeaderFile.h"
+
+void IOCON_setup(uint8_t address) {
+
+
+    GPIOF_AHB->DATA &= ~SS;
+    delay(10);
+//    ExpanderAddress |= address;
+    writeSPI_0(address);
+    writeSPI_0(IOCON_0);
+    writeSPI_0(0x08);
+    delay(10);
+    GPIOF_AHB->DATA |= SS;
+}
+
+
+void xPORTA_setup_X(uint8_t address) {
+    GPIOF_AHB->DATA &= ~SS;
+    delay(10);
+    writeSPI_0(address);
+    writeSPI_0(IODIRA);
+//    writeSPI_0(IO_EXPANDER->IODIRA);
+    writeSPI_0(0x00);
+    delay(10);
+    GPIOF_AHB->DATA |= SS;
+}
+
+void xPORTB_setup_X(uint8_t address) {
+    GPIOF_AHB->DATA &= ~SS;
+    delay(10);
+    writeSPI_0(address);
+    writeSPI_0(IODIRB);
+//    writeSPI_0(IO_EXPANDER->IODIRA);
+    writeSPI_0(0x00);
+    delay(10);
+    GPIOF_AHB->DATA |= SS;
+}
+
+void xGPIOA_out_1(uint8_t address, uint8_t value) {
+//        GPIOF_AHB->DATA &= ~RST;
+//        GPIOF_AHB->DATA |= RST;
+        GPIOF_AHB->DATA &= ~SS;
+        delay(10);
+        writeSPI_0(address);
+        writeSPI_0(xGPIOA);
+        writeSPI_0(value);
+        delay(10);
+        GPIOF_AHB->DATA |= SS;
+}
+
+
+void xGPIOB_out_1(uint8_t address, uint8_t value) {
+//        GPIOF_AHB->DATA &= ~RST;
+//        GPIOF_AHB->DATA |= RST;
+        GPIOF_AHB->DATA &= ~SS;
+        delay(10);
+        writeSPI_0(address);
+        writeSPI_0(xGPIOB);
+        writeSPI_0(value);
+        delay(10);
+        GPIOF_AHB->DATA |= SS;
+}
+
+
+
+
+
+
+
+

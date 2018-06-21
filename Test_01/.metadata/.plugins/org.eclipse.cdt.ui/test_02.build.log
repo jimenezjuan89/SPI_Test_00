@@ -1,0 +1,17 @@
+
+**** Build of configuration Debug for project test_02 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+'Building file: ../main.c'
+'Invoking: GNU Compiler'
+"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jjimene6/Documents/Workspace/CCS/SPI_Testing/Test_00" -I"C:/Users/jjimene6/Documents/Workspace/CCS/SPI_Testing/Test_00/driverlib" -I"C:/Users/jjimene6/Documents/Workspace/CCS/SPI_Testing/Test_00/inc" -I"C:/Users/jjimene6/Documents/Workspace/CCS/SPI_Testing/Test_00/headerFiles" -I"C:/ti/ccsv7/tools/compiler/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include" -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o" -o"main.o"  "../main.c"
+subdir_rules.mk:9: recipe for target 'main.o' failed
+In file included from ../main.c:15:0:
+../MCP23S17_REG.h:7:20: fatal error: Global.h: No such file or directory
+ #include <Global.h>
+                    ^
+compilation terminated.
+gmake: *** [main.o] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

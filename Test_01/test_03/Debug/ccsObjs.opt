@@ -1,0 +1,1 @@
+"./API_SPI.o" "./MCP23S17_EXP.o" "./delay.o" "./main.o" "./tm4c123gh6pm_startup_ccs_gcc.o" -Wl,-T"../tm4c123gh6pm.lds" "../driverlib/driverlib.lib" 

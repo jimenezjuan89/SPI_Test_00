@@ -1,0 +1,109 @@
+/*
+ * MCP23S17_REG.h
+ *
+ *  Created on: Jun 14, 2018
+ *      Author: JJimene6
+ */
+
+#ifndef MCP23S17_REG_H_
+#define MCP23S17_REG_H_
+
+//#define IO_EXPANDER_BASE    0x01UL
+
+
+//REGISTER ADDRESSES -->IOCON.BANK = 0<--//
+//typedef struct {
+//    uint8_t     IODIRA : 8;
+//    uint8_t     IODIRB : 8;
+//    uint8_t     IPOLA : 8;
+//    uint8_t     IPOLB : 8;
+//    uint8_t     GPINTENA : 8;
+//    uint8_t     GPINTENB : 8;
+//    uint8_t     DEFVALA : 8;
+//    uint8_t     DEFVALB : 8;
+//    uint8_t     INTCONA : 8;
+//    uint8_t     INTCONB : 8;
+//    uint8_t     IOCON_0 : 8;
+//    uint8_t     IOCON_1 : 8;
+//    uint8_t     GPPUA : 8;
+//    uint8_t     GPPUB : 8;
+//    uint8_t     INTFA : 8;
+//    uint8_t     INTFB : 8;
+//    uint8_t     INTCAPA : 8;
+//    uint8_t     INTCAPB : 8;
+//    uint8_t     xGPIOA : 8;
+//    uint8_t     xGPIOB : 8;
+//    uint8_t     OLATA : 8;
+//    uint8_t     OLATB : 8;
+//} RegAddress_t;
+
+
+//typedef struct {
+//__I    uint8_t     IODIRA;
+//__I    uint8_t     IODIRB;
+//__I    uint8_t     IPOLA;
+//__I    uint8_t     IPOLB;
+//__I    uint8_t     GPINTENA;
+//__I    uint8_t     GPINTENB;
+//__I    uint8_t     DEFVALA;
+//__I    uint8_t     DEFVALB;
+//__I    uint8_t     INTCONA;
+//__I    uint8_t     INTCONB;
+//__I    uint8_t     IOCON_0;
+//__I    uint8_t     IOCON_1;
+//__I    uint8_t     GPPUA;
+//__I    uint8_t     GPPUB;
+//__I    uint8_t     INTFA;
+//__I    uint8_t     INTFB;
+//__I    uint8_t     INTCAPA;
+//__I    uint8_t     INTCAPB;
+//__IO    uint8_t     xGPIOA;
+//__IO    uint8_t     xGPIOB;
+//__IO    uint8_t     OLATA;
+//__IO    uint8_t     OLATB;
+//} RegAddress_t;
+//
+//#define IO_EXPANDER      ((RegAddress_t       *) IO_EXPANDER_BASE)
+
+///////////////REGISTER ADDRESSES -->IOCON.BANK = 0<--////////////
+#define     IODIRA      0x00
+#define     IODIRB      0x01
+#define     IPOLA       0x02
+#define     IPOLB       0x03
+#define     GPINTENA    0x04
+#define     GPINTENB    0x05
+#define     DEFVALA     0x06
+#define     DEFVALB     0x07
+#define     INTCONA     0x08
+#define     INTCONB     0x09
+#define     IOCON_0     0x0A
+#define     IOCON_1     0x0B
+#define     GPPUA       0x0C
+#define     GPPUB       0x0D
+#define     INTFA       0x0E
+#define     INTFB       0x0F
+#define     INTCAPA     0x10
+#define     INTCAPB     0x11
+#define     xGPIOA      0x12
+#define     xGPIOB      0x13
+#define     xOLATA      0x14
+#define     xOLATB      0x15
+
+#define ExpanderAddress_00     0x40
+#define ExpanderAddress_01     0x41
+
+uint8_t ExpanderAddress = 40;
+
+#define ADDRESS_00      0x40
+#define ADDRESS_01      0x41
+#define ADDRESS_02      0x42
+#define ADDRESS_03      0x43
+#define ADDRESS_04      0x44
+#define ADDRESS_05      0x45
+#define ADDRESS_06      0x46
+#define ADDRESS_07      0x47
+#define ADDRESS_08      0x48
+//////////////////////////////////////////////////////////////////////////
+
+
+#endif /* MCP23S17_REG_H_ */
